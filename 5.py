@@ -44,12 +44,10 @@ def write_output(filename, arr_norm, a, b, max_abs_ind, nummer, summer):
         file.write("Упорядоченный массив:\n")
         file.write(str(nummer).replace('[', '').replace(']', '').replace(',', '') + "\n")
         file.write(f"Сумма элементов массива, которые находятся после первого положительного: {summer}\n")
-
+n, a, b, arr = read_input("input2.txt")
 # Основная программа
-def main():
+def main(n, a, b, arr):
     # Чтение входных данных
-    n, a, b, arr = read_input("input2.txt")
-    arr_norm = arr
 
         # Шаг 1: Запрос количества элементов массива (не более 30)
     if n > 30:
@@ -79,7 +77,6 @@ def main():
     # Шаг 4: Вычисляем сумму элементов массива, которые находятся после первого положительного.
     n = len(arr)
     nummer = arr
-    arr = arr_norm
     count = 0
     flag = 1
     summer = 0
@@ -93,12 +90,10 @@ def main():
             print(arr)
             nummer.pop(0)
             count += 1
-    
-    print(arr_norm)
 
     # Шаг 5: Упорядочиваем элементы массива, чтобы сначала располагались все элементы, целая часть которых лежит в интервале [а, b], а потом — все остальные.
 
-    sorted_arr = arr_norm
+    sorted_arr = arr
     print(sorted_arr)
     in_range = [x for x in sorted_arr if a <= x <= b]
 
@@ -107,6 +102,6 @@ def main():
     sorted_arr = sorted(in_range, reverse=True) + sorted(out_range, reverse=True)
 
     # Запись результатов в файл
-    write_output("output2.txt", arr_norm, a, b, max_abs_ind, sorted_arr, summer)
+    write_output("output2.txt", arr, a, b, max_abs_ind, sorted_arr, summer)
 
-main()
+main(n, a, b, arr)
