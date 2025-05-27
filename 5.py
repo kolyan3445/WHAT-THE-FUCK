@@ -7,9 +7,9 @@ with open('input.txt', 'r') as file:
 
 # Вычисление значений z1 и z2
 z1 = (sin(4 * x)) / (1 + cos(4 * x)) * (cos(2 * x) / (1 + cos(2 * x)))
-print("{0:.2f} {1:.4f} ".format(x, z1))
+print(x, z1)
 z2 = cos((3/2) * pi - x) / (sin(3/2) * pi - x)
-print("{0:.2f} {1:.4f}".format(x, z2))
+print(x, z2)
 
 
 # Запись результатов в файл
@@ -17,7 +17,7 @@ with open('output.txt', 'w') as file:
     file.write("{0:.2f} {1:.4f}\n".format(x, z1))
     file.write("{0:.2f} {1:.4f}\n".format(x, z2))
 
-
+"""
 #-------------ЧАСТЬ 2-------------
 # Функция для чтения входных данных из файла
 def read_input(filename):
@@ -48,6 +48,8 @@ n, a, b, arr = read_input("input2.txt")
 # Основная программа
 def main(n, a, b, arr):
     # Чтение входных данных
+    orig_arr = arr
+    #print(orig_arr)
 
         # Шаг 1: Запрос количества элементов массива (не более 30)
     if n > 30:
@@ -72,29 +74,27 @@ def main(n, a, b, arr):
 
     # Шаг 3: Нахождение номера максимального по модулю элемента
     abs_num = [abs(x) for x in arr]
-    max_abs_ind = abs_num.index(max(abs_num))
+    max_abs_ind = abs_num.index(max(abs_num)) + 1
 
     # Шаг 4: Вычисляем сумму элементов массива, которые находятся после первого положительного.
     n = len(arr)
-    nummer = arr
-    count = 0
     flag = 1
     summer = 0
-    print(arr)
+    nummer = arr
+    arr = str(arr).replace('[', '').replace(']', '').replace(',', '')
+    #print(arr)
     while flag:
-        if nummer[count] > 0:
+        if nummer[0] > 0:
             flag = 0
+            nummer.pop(0)
             summer = sum(nummer)
             break
         else:
-            print(arr)
+            #print(nummer)
             nummer.pop(0)
-            count += 1
 
     # Шаг 5: Упорядочиваем элементы массива, чтобы сначала располагались все элементы, целая часть которых лежит в интервале [а, b], а потом — все остальные.
-
-    sorted_arr = arr
-    print(sorted_arr)
+    sorted_arr = [float(x) for x in arr.split()]
     in_range = [x for x in sorted_arr if a <= x <= b]
 
     out_range = [x for x in sorted_arr if x not in in_range]
@@ -105,3 +105,4 @@ def main(n, a, b, arr):
     write_output("output2.txt", arr, a, b, max_abs_ind, sorted_arr, summer)
 
 main(n, a, b, arr)
+"""
