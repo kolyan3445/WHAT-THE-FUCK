@@ -45,7 +45,7 @@
             <mxPoint x="278" y="30" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="srJffqGDGw885YCpQ9y4-9" connectable="0" parent="srJffqGDGw885YCpQ9y4-8" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;labelBackgroundColor=none;" value="λ&lt;font&gt;₀&lt;/font&gt;α" vertex="1">
+        <mxCell id="srJffqGDGw885YCpQ9y4-9" connectable="0" parent="srJffqGDGw885YCpQ9y4-8" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;labelBackgroundColor=none;" value="λ&lt;font&gt;₀&lt;/font&gt;" vertex="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-14" y="5" as="offset" />
           </mxGeometry>
@@ -56,7 +56,7 @@
             <mxPoint x="374" y="110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="srJffqGDGw885YCpQ9y4-23" connectable="0" parent="srJffqGDGw885YCpQ9y4-22" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;labelBackgroundColor=none;" value="λ₀β" vertex="1">
+        <mxCell id="srJffqGDGw885YCpQ9y4-23" connectable="0" parent="srJffqGDGw885YCpQ9y4-22" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;labelBackgroundColor=none;" value="λ₀" vertex="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="39" y="18" as="offset" />
           </mxGeometry>
